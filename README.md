@@ -216,6 +216,7 @@ Rumus RMSE adalah sebagai berikut:
 ![Rumus RMSE](https://github.com/auriwan/Recommendation-system/blob/image/image/rumus%20RMSE.jpg?raw=true)
 Berikut Grafik RMSE
 ![Grafik RMSE](https://github.com/auriwan/Recommendation-system/blob/image/image/Grafik%20MSE.png?raw=true)
+
 Dari Grafik diatas dapat kita lihat bahwa niliai error RMSE adalah dibawah 0.05 pada data training, dan diatas 0.20 pada data tes. Nilai error ini cukup bagus unutk sistem rekomendasi anime, bisa kita lihat pada gambar berikut
 
 ![Rekomendasi](https://github.com/auriwan/Recommendation-system/blob/image/image/rekomendasi%20collaborative.PNG?raw=true)
