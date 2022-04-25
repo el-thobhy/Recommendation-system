@@ -5,17 +5,17 @@
 Pada Proyek kali ini domain proyek yang penulis pilih adalah mengenai hiburan yaitu "Anime Recommendation system".
 
 **Latar Belakang**
-Saat ini kartun jepang atau *anime* mengalami perkembangan yang sangat cepat dan penggemarnya tersebar diseluruh dunia. Terutama dengan merebaknya pandemi yang serba terbatas, membuat kebutuhan manusia akan hiburan semakin bertambah, salah satunya kartun jepang ini. Sudah banyak sekali platform yang menyediakan media hiburan seperti kartun jepang. Tentunya sebagai salah satu strategi marketing dalam dunia bisnis, UX atau user experience merupakan hal yang sangat penting bagi perkembangan platform tersebut. Maka salah satu strategi yang disiapkan perusahaan agar user betah dengan platform tersebut adalah adalah sistem rekomendasi mengenai sesuatu atau apa saja yang mungkin disukai oleh user. Disinilah Machine learning akan bekerja, dengan mengumpulkan data dari user, perusahaan harus mampu membuat suatu sitem rekomendasi yang mungkin akan disukai oleh pengguna.
+Saat ini kartun jepang atau *anime* mengalami perkembangan yang sangat cepat dan penggemarnya tersebar diseluruh dunia. Terutama dengan merebaknya pandemi yang serba terbatas, membuat kebutuhan manusia akan hiburan semakin bertambah, salah satunya kartun jepang ini. Sudah banyak sekali platform yang menyediakan media hiburan seperti kartun jepang. Tentunya sebagai salah satu strategi marketing dalam dunia bisnis, UX atau user experience merupakan hal yang sangat penting bagi perkembangan platform tersebut. Maka salah satu strategi yang disiapkan perusahaan agar user betah dengan platform tersebut adalah sistem rekomendasi mengenai sesuatu atau apa saja yang mungkin disukai oleh user. Disinilah Machine learning akan bekerja, dengan mengumpulkan data dari user, perusahaan harus mampu membuat suatu sitem rekomendasi yang mungkin akan disukai oleh pengguna.
 
 Terdapat cukup banyak pendekatan yang bisa digunakan dalam sistem rekomendasi diantaranya Content-Based-Filtering, Collaborative-Filtering, Multi-criteria, risk aware, hybrid-filtering dan lainnya. Badal Soni et al [[1]](https://arxiv.org/abs/2106.12970) dengan RikoNet-nya menggabungkan pendekatan content-based dan collaborative filtering dalam sistem rekomendasi yang dibuatnya. Begitu juga Sistem rekomendasi yang dirancang oleh Ramashini et al[[2]](http://ir.kdu.ac.lk/handle/345/4173) yang juga menggunakan kombinasi antara content-base dan collaborative filtering. Kumar et al[[3]](https://www.ijcaonline.org/archives/volume124/number3/22082-2015904111) dengan MOV REC-nya mengajukan sistem rekomendasi dengan pendekatan collaborative filtering yang menggunakan informasi yang disediakan oleh penguna, lalu menganalisanya dan mebuat list rekomendasi yang cocok untuk para pengguna.
 
 ##  Business Understanding
 
-Dalam dunia bisnis, user experience sangat berperan penting dalam perkembangan produk milik perusahaan. Sehingga dibutuhkan strategi yang tepat untuk membuat pengguna nyaman dengan plaform tersebut. Jadi sistem rekomendasi akan membuat user experience menjadi lebih baik karena pengguna bisa menemukan rekomendasi tontonan yang tepat, dalam hal ini adalah kartun jepang atau anime.
+Dalam dunia bisnis user experience sangat berperan penting dalam perkembangan produk milik perusahaan. Sehingga dibutuhkan strategi yang tepat untuk membuat pengguna nyaman dengan plaform tersebut. Jadi sistem rekomendasi akan membuat user experience menjadi lebih baik karena pengguna bisa menemukan rekomendasi tontonan yang tepat, dalam hal ini adalah kartun jepang atau anime.
 
 ###  Problem Statements
 
-Berdasarkan latarbelakang yang disebutkan diatas, permasalahan yang dapat diselesaikan pada proyek ini adalah
+Berdasarkan latar belakang yang disebutkan diatas, permasalahan yang dapat diselesaikan pada proyek ini adalah
 
 - Bagaimana cara pengolahan data yang tepat untuk digunakan dalam merancang suatu model machine learning
 
@@ -30,9 +30,9 @@ Tujuan dari dibuatnya proyek ini adalah:
 - Merancang model machine learning untuk membuat sistem rekomendasi kartun jepang.
 
 ### Solution statements
-Untuk mencapai tujuan dari proyek ini maka penulis menggunakan 2 algoritma yaitu content base filtering dan collaborative filtering. 
-	- Content-base filtering merupakan cara untuk memberikan rekomendasi berdasarkan genre atau item pada fitur yang diminati pengguna. Ide dari sistem rekomendasi berbasis konten (_content-based filtering_) adalah merekomendasikan item yang mirip dengan item yang disukai pengguna di masa lalu
-	- _Collaborative Filtering_ merupakan cara untuk memberi rekomendasi bedasarkan penilaian komunitas pengguna atau biasa disebut dengan _rating_
+Untuk mencapai tujuan dari proyek ini maka penulis menggunakan 2 algoritma, yaitu content base filtering dan collaborative filtering. 
+- Content-base filtering merupakan cara untuk memberikan rekomendasi berdasarkan genre atau item pada fitur yang diminati pengguna. Ide dari sistem rekomendasi berbasis konten (_content-based filtering_) adalah merekomendasikan item yang mirip dengan item yang disukai pengguna di masa lalu.
+- _Collaborative Filtering_ merupakan cara untuk memberi rekomendasi bedasarkan penilaian komunitas pengguna atau biasa disebut dengan _rating_.
 
 ##  Data Understanding
 
@@ -55,7 +55,7 @@ Berikut ini file yang terdapat pada dataset:
 - watching_status.csv
 
  Dataset yang akan digunakan hanya dataset anime.csv
- lalu selanjutnya dataset rating yang diambil dari sumber berbeda, dengan sumber sebelumnya karena dataset dari hernan terlalu besar, berikut dataset yang akan digunakan:
+ lalu selanjutnya dataset rating yang diambil dari sumber berbeda, dengan sumber sebelumnya, karena dataset dari hernan terlalu besar. Berikut dataset yang akan digunakan:
  
 | Jenis | Keterangan |
 |--|--|
@@ -124,7 +124,7 @@ Jumlah data 192112
 - **Sebaran data**
 Sebaran data genre anime
 ![Sebaran data genre anime](https://github.com/auriwan/Recommendation-system/blob/image/image/Distribusi%20sebaran%20genre%20anime.png?raw=true)
-terdapat 47 data genre dan dari data diatas genre paling banyak adalah Comedy
+terdapat 47 data genre dan dari data diatas dan genre paling banyak adalah Comedy
 
 sebaran 10 Anime dengan rating tertinggi
 ![Sebaran Rating 10 anime  tertinggi](https://github.com/auriwan/Recommendation-system/blob/image/image/Distribusi%20sebaran%20rating%20dari%2010%20anime.png?raw=true)
@@ -134,64 +134,74 @@ Terlihat pada gambar diatas anime dengan rating tertinggi dipegang oleh Death No
 ##  Data Preparation
 
 - Content-Based-filtering
-	1. Check missing value
-Pada tahapan ini Penulis memeriksa apakah ada data kosong atau missing value, karena missing value ini akan mempengaruhi keakuratan rekomendasi karena terdapat banyak data yang kosong dan setelah diperiksa tidak ada missing value pada kedua dataset. Jadi penulis tidak perlu melakukan drop  data.
-	2.  Check Duplikasi data
-Selanjutnya memeriksa data duplikat. Duplikat juga akan memperlama pemrosesan data karena itu data duplikat harus kita hapus. Setelah dilakukan pengecekan tidak terdapat data duplikat pada dataset anime, sedangkan pada dataset rating terdapat 61584 data duplikat jadi data ini harus dihapus.
+	1. Menghapus missing value
+Pada tahapan ini Penulis memeriksa apakah ada data kosong atau missing value, karena missing value ini akan mempengaruhi keakuratan rekomendasi karena terdapat banyak data yang kosong dan setelah diperiksa tidak ada missing value pada dataset. Jadi penulis tidak perlu melakukan drop  data.
+	2.  Menghapus Duplikasi data
+Selanjutnya memeriksa data duplikat. Data duplikat juga akan memperlama pemrosesan data karena itu data duplikat harus kita hapus. 
 - Collaborative filtering
-Pada algoritma ini tahapan persiapan datanya sama dengan content base filtering, yaitu check missing value dan check duplikasi data pada data rating, yang berbeda hanya pada tahapan menggabungkan data anime dan rating. Karena pada algoritma collaborative filtering kita membutuhkan data rating atau score, user id, serta anime_id, jadi kita harus menggabungkan data anime dan rating. Setelah data digabungkan, penulis melakukan encoder pada user id dan anime id agar data dapat dilatih dengan maksimal oleh model. Kemudian data yang sudah diencode anak di mapping kedalam data yang digunakan dan juga mengubah nilai rating menjadi float. Selanjutnya barulah data dibagi menjadi training dan data test.
+	1. Menggabungkan data anime dan rating
+	Karena pada algoritma collaborative filtering kita membutuhkan data rating atau score, user id, serta anime_id, penulis harus menggabungkan data anime dan rating..
+	2. Menghapus missing value
+	Selanjutnya penanganan missing value pada data dengan melakukan drop data. Setelah diperiksa tidak ada missing value pada data gabungan. 
+	3. Menghapus duplikasi data
+	Setelah diperiksa terdapat data duplikat pada dataset gabungan yaitu sebanyak 61584, jadi data ini harus dihapus.
+	4. Melakukan Normalisasi Nilai Rating
+    Untuk menghasilkan rekomendasi yang sesuai dan akurat maka pada tahap ini diperlukan sebuah normalisasi pada data nilai  _rating_  dengan menggunakan formula MinMax pada data rating sebelum memasuki tahap modelling.
+    5. Melakukan Splitting Dataset
+    Untuk melatih model maka penulis perlu melakukan pembagian dataset latih dan juga dataset validasi. Data set latih sebesar 80% dari total keseluruhan jumlah data sedangkan dataset validasi sebesar 20% dari keseluruhan data. Hal ini diperlukan untuk pengembangan pada model  _Collaborative Filtering_  nantinya.
 
-##  Modeling
+##  Modeling dan Result
 
 Model yang penulis gunakan adalah deep learning dan cosine similarity. Deep learning untuk sistem rekomendasi dengan algoritma Collaborative learning dan cosine similarity untuk Conten-based-learning.
 
 1. Content Based Filtering
-Pada model ini langkah pertama yang dilakukan ialah melakukan ekstraksi fitur pada genre. Fungsi digunakan adalah tfidfvectorizer() dari library sklearn. Setelah data diekstraksi tahapan selanjutnya adalah melakukan fit dan transformasi ke dalam bentuk matriks, outputnya adalah berupa matriks 17562 x 47 yang merupakan representasi jumlah data anime dan jumlah genre anime.
+Pada model ini langkah pertama yang dilakukan ialah melakukan ekstraksi fitur pada genre. Fungsi digunakan adalah TfidfVectorizer() dari library sklearn. Setelah data diekstraksi tahapan selanjutnya adalah melakukan fit dan transformasi ke dalam bentuk matriks, outputnya adalah berupa matriks 17562 x 47 yang merupakan representasi jumlah data anime dan jumlah genre anime.
 
-	Untuk menghitung derajat kesamaan (_similarity degree_) antar anime, penulis menggunakan teknik  _cosine similarity_  dengan fungsi  _cosine_similarity_  dari  _library_  sklearn. Data yang digunakan adalah data matriks yang sudah penulis dapatkan sebelumnya.
+	Untuk menghitung derajat kesamaan (_similarity degree_) antar anime, penulis menggunakan teknik  _cosine similarity_  dengan fungsi  _cosine_similarity_  dari  _library_  sklearn. Cara kerja _cosine similarity_ adalah dengan mengukur kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Ia menghitung sudut cosinus antara dua vektor. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity. Data yang digunakan adalah data matriks yang sudah penulis dapatkan sebelumnya. Berikut Formula dari cosine similarity:
+	![Cosine Similarity](https://raw.githubusercontent.com/auriwan/Recommendation-system/image/image/cosine%20similarity.webp)
 	Langkah selanjutnya yaitu menggunakan  _argpartition_  untuk mengambil sejumlah nilai k tertinggi dari  _similarity_  data kemudian mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Kemudian menguji akurasi dari sistem rekomendasi ini untuk menemukan rekomendasi anime yang mirip dari anime yang ingin dicari.
 
--   Kelebihan
+    -   Kelebihan
     
-    -   Akurasi akan cukup bagus dengan banyaknya informasi yang diberikan pengguna.
--   Kekurangan
+        -   Akurasi akan cukup bagus dengan banyaknya informasi yang diberikan pengguna.
+    -   Kekurangan
     
-    -   Hanya dapat digunakan untuk fitur yang sesuai, seperti film, anime, buku, dan lain-lain.
-    -   Tidak mampu menentukan profil dari user baru.
+        -   Hanya dapat digunakan untuk fitur yang sesuai, seperti film, anime, buku, dan lain-lain.
+        -   Tidak mampu menentukan profil dari user baru.
 
-Berikut ini adalah konten yang dijadikan referensi untuk menentukan 10 rekomendasi anime tertinggi yang memiliki kesamaan genre yang sama:
-![Reference of Recommendation](https://github.com/auriwan/Recommendation-system/blob/image/image/referensi%20rekomendasi.PNG?raw=true)
+    Berikut ini adalah konten yang dijadikan referensi untuk menentukan 10 rekomendasi anime tertinggi yang memiliki kesamaan genre yang sama:
+    ![Reference of Recommendation](https://github.com/auriwan/Recommendation-system/blob/image/image/referensi%20rekomendasi.PNG?raw=true)
 
-Terlihat pada tabel diatas bahwasannya penulis akan menguji coba model berdasarkan judul anime "Cowboy Bebop" dengan genre Action, Adventure, comedy, Drama, Sci-fi, dan Space.
+    Terlihat pada tabel diatas uji coba model akan dilakukan berdasarkan judul anime "Cowboy Bebop" dengan genre Action, Adventure, comedy, Drama, Sci-fi, dan Space.
 
-Berikut ini adalah hasil rekomendasi tertinggi dari model  _Content Based Filtering_  berdasarkan referensi anime diatas:
-![Rekomendasi](https://github.com/auriwan/Recommendation-system/blob/image/image/rekomendasi.PNG?raw=true)
+    Berikut ini adalah hasil rekomendasi tertinggi dari model  _Content Based Filtering_  berdasarkan referensi anime diatas:
+    ![Rekomendasi](https://github.com/auriwan/Recommendation-system/blob/image/image/rekomendasi.PNG?raw=true)
 
-3. Collaborative Filtering
+2. Collaborative Filtering
 Pada Model ini data yang akan digunakan adalah data gabungan antara data anime dan data rating. User id dan anime_id akan diencode dan dimapping kedalam data dan data rating akan diubah menjadi float. Selanjutnya data akan displit menjadi data train dan data test sebesat 80% untuk data training dan 20% untuk data validasi.
 
 	Lalu penulis melakukan proses _embedding_ terhadap data anime dan pengguna. Lalu lakukan operasi perkalian _dot product_ antara _embedding_ pengguna dan anime. Selain itu, penulis juga menambahkan bias untuk setiap pengguna dan anime. Skor kecocokan ditetapkan dalam skala [0,1] dengan fungsi aktivasi _sigmoid_. Untuk mendapatkan rekomendasi anime, data gabungan akan diacak terlebih dahulu dan mendefinisikan variabel _movie_not_watched_ yang merupakan daftar anime yang belum pernah ditonton oleh pengguna.
 	Berikut adalah kelebihan dan kekurangan dari algoritma collaborative filtering
--   Kelebihan
-    -   Tidak memerlukan atribut untuk setiap itemnya.
-    -   Dapat membuat rekomendasi tanpa harus selalu menggunakan dataset yang lengkap.
-    -   Unggul dari segi kecepatan dan skalabilitas.
-    -   Rekomendasi akan tetap berjalan meski data sulit dianalisis
--   Kekurangan
-    -   Membutuhkan parameter rating, sehingga jika ada item baru sistem tidak akan merekomendasikan item tersebut.
+    -   Kelebihan
+        -   Tidak memerlukan atribut untuk setiap itemnya.
+        -   Dapat membuat rekomendasi tanpa harus selalu menggunakan dataset yang lengkap.
+        -   Unggul dari segi kecepatan dan skalabilitas.
+        -   Rekomendasi akan tetap berjalan meski data sulit dianalisis
+    -   Kekurangan
+        -   Membutuhkan parameter rating, sehingga jika ada item baru sistem tidak akan merekomendasikan item tersebut.
     
-    Berikut ini adalah hasil rekomendasi anime tertinggi untuk user 35511:
-    ![Rekomendasi](https://github.com/auriwan/Recommendation-system/blob/image/image/rekomendasi%20collaborative.PNG?raw=true)
+    Berikut ini adalah hasil rekomendasi anime tertinggi untuk user 10112:
+    ![Rekomendasi](https://github.com/auriwan/Recommendation-system/blob/image/image/rekomendasi%20last.PNG?raw=true)
     
 
 ##  Evaluation
 
 
-Evaluasi yang akan penulis lakukan disini yaitu evaluasi dengan Mean Absolute Error (MAE) dan Root Mean Squared Error (RMSE) pada Collaborative Filtering dan Precision Content Based Filtering
+Evaluasi yang akan penulis lakukan disini yaitu evaluasi dengan Mean Absolute Error (MAE) dan Root Mean Squared Error (RMSE) pada Collaborative Filtering dan Precision untuk Content Based Filtering
 
 ## Content Based Filtering
 
-Pada evaluasi model ini penulis menggunakan metrik precision content based filtering untuk menghitung precision model sistem telah dibuat sebelumnya.
+Pada evaluasi model ini penulis menggunakan metrik precision untuk menghitung keakuratan dari model yang telah dibuat sebelumnya.
 Precision ini menghitung jumlah data relevan dibagi dengan jumlah item yang kita rekomendasikan.
 rumus untuk precision adalah sebagai berikut 
 ![formula presisi](https://github.com/auriwan/Recommendation-system/blob/image/image/precision_formula.png?raw=true)
@@ -203,21 +213,30 @@ Lalu hasil rekomendasi yang relevan hanya 1 yang sama persis memiliki 6 genre ya
 
 ##  Collaborative Filtering
 1. Mean Absolute Error (MAE)
-	MAE mengukur berapa besar rata-rata kesalahan yang dilakukan oleh model yang sudah dilatih kepada data tes, tampa mempertimbangkan arahnya. Semakin rendah nilai MAE makan akan semakin baik model yang sudah dirancang.
+	MAE mengukur berapa besar rata-rata kesalahan yang dilakukan oleh model yang sudah dilatih pada data tes, tampa mempertimbangkan arahnya. Semakin rendah nilai MAE maka akan semakin baik model yang sudah dirancang.
 	Formula MAE:
 	![formula mae](https://camo.githubusercontent.com/c77f373a758989aaf94b5c9adbafb11c41f25b6baeb47c93a328ed4a94f16cd4/68747470733a2f2f67697367656f6772617068792e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031342f30382f6d61652d666f726d756c612e706e67)
 	Berikut hasil grafik MAE
-	![Grafik mae](https://github.com/auriwan/Recommendation-system/blob/image/image/grafik%20MAE.png?raw=true)
-	Berdasarkan fitting diatas nilai error model adalah dibawah 0.025, sedangkan nilai error untu validasi diatas 0.200
+	![enter image description here](https://github.com/auriwan/Recommendation-system/blob/image/image/mae%20last.png?raw=true)
+	Berdasarkan fitting diatas nilai error model adalah dibawah 0.14, sedangkan nilai error untuk validasi diatas 0.200.
+
+    ![MAE](https://github.com/auriwan/Recommendation-system/blob/image/image/kualitas%20mae%20last.PNG?raw=true)
+
+    Nilai MAE yang baik seharusnya berada dibawah 0.1 atau 10%, jadi model bisa dikatan belum cukup baik
 	
 3. Root Mean Squared Error (RMSE)
-RMSE merupakan aturan penilaian kuadrat yang juga mengukur besarnya rata-rata error, semakin kecil errornya maka model semakin baik
+RMSE merupakan aturan penilaian kuadrat yang juga mengukur besarnya rata-rata error, semakin kecil errornya maka model semakin baik.
 Rumus RMSE adalah sebagai berikut:
 ![Rumus RMSE](https://github.com/auriwan/Recommendation-system/blob/image/image/rumus%20RMSE.jpg?raw=true)
 Berikut Grafik RMSE
-![Grafik RMSE](https://github.com/auriwan/Recommendation-system/blob/image/image/Grafik%20MSE.png?raw=true)
+![enter image description here](https://github.com/auriwan/Recommendation-system/blob/image/image/Rmse%20last.png?raw=true)
+Dari Grafik diatas dapat kita lihat bahwa niliai error RMSE adalah dibawah 0.17 pada data training, dan diatas 0.23 pada data tes. 
 
-Dari Grafik diatas dapat kita lihat bahwa niliai error RMSE adalah dibawah 0.05 pada data training, dan diatas 0.20 pada data tes. Nilai error ini cukup bagus unutk sistem rekomendasi anime, bisa kita lihat pada gambar berikut
+    ![RMSE](https://github.com/auriwan/Recommendation-system/blob/image/image/kualitas%20mae%20last.PNG?raw=true)
 
-![Rekomendasi](https://github.com/auriwan/Recommendation-system/blob/image/image/rekomendasi%20collaborative.PNG?raw=true)
-cukup banyak anime dengan genre yang sesuai dengan yang sudah diberi rating oleh user, jadi bisa dibilang rekomendasinya cukup bagus.
+    Nilai RMSE juga berada dibawah 10% skala data, jadi model bisa dikatakan belum cukup baik.
+
+Nilai error dari hasil MAE dan RMSE mengalami overfitting pada data validasi, sehingga membuat score kualitas RMSE dan MAE kurang baik. Jadi pada collaborative learning model masih perlu pengembangan lebih banyak lagi, seperti menambahkan hyperparameter tuning untuk mengatasi overfitting pada data validasi. Namun karena keterbatasan waktu penulis belum bisa menambahkan hyperparameter tuning pada model tersebut.
+
+Berdasarkan Tujuan dari proyek ini dan masalah yang dihadapi, yaitu pengolahan dari dataset yang penulis miliki dan evaluasi dari kedua model yang diajukan, dapat disimpulkan bahwa sistem rekomendasi sudah bisa berjalan, akan tetapi keakuratannya masih perlu ditingkatkan.
+
